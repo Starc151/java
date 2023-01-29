@@ -17,6 +17,7 @@ public class Program {
             System.out.println("You entered a number less than 0");
             System.exit(0);
         }
+        in.close();
         return num;
     }
 

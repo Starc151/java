@@ -32,14 +32,19 @@ public class Program {
                 b = getIntFromString(inArr[i]);
             }
         }
+        if (a == 0 && b == 0) {
+            System.out.println("not defined");
+            System.exit(0);
+        }
         return (int) Math.pow(a, b);
     }
     public static int getIntFromString(String s) {
         Pattern pat = Pattern.compile("[-]?[0-9]+(.[0-9]+)?");
         Matcher matcher = pat.matcher(s);
         int res = 0;
+        // if (s.contains(""))
         while (matcher.find()) {
-            res = Integer.parseInt (matcher.group());
+            res = Integer.parseInt(matcher.group()); //при неправильно записнном input.tx 
         };
         return res;
     }
